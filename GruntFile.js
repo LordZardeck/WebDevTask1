@@ -38,7 +38,8 @@ module.exports = function(grunt) {
 		        },
 		        files: {
 		            'js/plugins.js': [
-		                'bower_components/director/build/director.js'
+		                'bower_components/director/build/director.js',
+		                'bower_components/knockout-dist/knockout.js'
 		            ]
 		        }
 		    }
@@ -51,12 +52,35 @@ module.exports = function(grunt) {
 			plugin_less: {
 				files: ['less/plugins.less'],
 				tasks: 'less:plugins'
+			},
+			html: {
+				files: ['html/**/*.html'],
+				tasks: 'htmlbuild:dev'
 			}
-		}
+		},
+		htmlbuild: {
+	        dev: {
+	            src: 'html/index.html',
+	            options: {
+	                beautify: false,
+	                relative: true,
+	                scripts: {
+	                    main: 'js/**/*.js'
+	                },
+	                styles: {
+	                    main: 'css/**/*.css'
+	                },
+	                sections: {
+	                    templates: ['html/**/*.html', '!html/index.html']
+	                }
+	            }
+	        }
+	    }
 	});
 
 	// Load our npm grunt tasks
   	grunt.loadNpmTasks('grunt-contrib-less');
   	grunt.loadNpmTasks('grunt-contrib-uglify');
   	grunt.loadNpmTasks('grunt-contrib-watch');
+  	grunt.loadNpmTasks('grunt-html-build');
 }
