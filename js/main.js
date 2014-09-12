@@ -24,6 +24,11 @@ AppViewModel.prototype.init = function() {
 
 // Verifty the page then update the observable with it
 AppViewModel.prototype.changePage = function(newPage) {
+	if(typeof newPage == "string") {
+		router.setRoute(newPage);
+		return;
+	}
+
 	if(!AppViewModel.isValidPage(newPage))
 		throw new Error("Cannot change to an invalid page.");
 
