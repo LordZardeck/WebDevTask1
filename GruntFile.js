@@ -71,7 +71,8 @@ module.exports = function(grunt) {
 	                    main: 'css/**/*.css'
 	                },
 	                sections: {
-	                    templates: ['html/**/*.html', '!html/index.html']
+	                    pageTemplates: ['html/pages/**/*.html'],
+	                    navBar: ['html/nav-bar.html']
 	                }
 	            }
 	        }
