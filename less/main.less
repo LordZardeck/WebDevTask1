@@ -2,9 +2,29 @@
 @import "app/navbar";
 @import "app/webdev-jumbotron";
 
+html {
+	height: 100%;
+}
+
 body {
+	min-height: 100%;
+	position: relative;
 	padding-top: 15px;
+	padding-bottom: 70px;
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	padding: 25px 0;
+
+	p {
+		margin: 0;
+		color: #777;
+	}
 }
 
 a {
