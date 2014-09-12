@@ -38,6 +38,8 @@ module.exports = function(grunt) {
 		        },
 		        files: {
 		            'js/plugins.js': [
+		            	'bower_components/jquery/dist/jquery.js',
+		            	'bower_components/bootstrap/dist/js/bootstrap.js',
 		                'bower_components/director/build/director.js',
 		                'bower_components/knockout-dist/knockout.js'
 		            ]
