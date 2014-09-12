@@ -83,4 +83,6 @@ module.exports = function(grunt) {
   	grunt.loadNpmTasks('grunt-contrib-uglify');
   	grunt.loadNpmTasks('grunt-contrib-watch');
   	grunt.loadNpmTasks('grunt-html-build');
+
+  	grunt.registerTask('build', ['less:plugins', 'less:app', 'uglify:plugins', 'htmlbuild']);
 }

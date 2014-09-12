@@ -20,10 +20,13 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="container" data-bind="template: { name: 'login-page' }"></div>
+        <div class="container" data-bind="template: { name: currentPage()._template, data: currentPage }"></div>
         
 <script type="text/html" id="login-page">
-	<p>Hello world! This is HTML5 Boilerplate.</p>
+	<p>Login Page.</p>
+</script>
+<script type="text/html" id="register-page">
+	<p>Register Page.</p>
 </script>
 
         <script type="text/javascript" src="js/plugins.js"></script>
