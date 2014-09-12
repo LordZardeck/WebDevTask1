@@ -3,6 +3,17 @@ WebDevTask1
 
 Project for creating a login and register page utilizing Director.js as part of the Talentbuddy Web Dev Course.
 
+**[Skip To Setup](#setup)**
+
+## Project Scope
+
+The task for this project was to create a SPA (Single Page Application) utilizing [Director.js](https://github.com/flatiron/director) for HTML5 page routing. The application was required to accept routes on page load, and navigate inside the page using the HTML5 History API. Specifically, this meant DISABLING the `#` routing system typically seen on older SPAs.
+
+The project requirement also stated that the application was to have 2 pages, a login page and a sign up page. These pages were to have no functionality other than linking between themselves.
+
+Assets where provided along with the design guideline that the site should look as similar as possible to this:
+![](https://photos-1.dropbox.com/t/0/AABPexvtu0BSu_Xs6gPepGA627fRX5fV7MBbDd9186c0RQ/12/20018531/png/1024x768/3/1410508800/0/2/Login.png/tR6424AbIJkFTuAx_Hccpwk00qx86l6mbpyn7eMBpMQ)
+
 ## Setup
 You will need to have Node.js and NPM instaled as well as nginx.
 
